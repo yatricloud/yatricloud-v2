@@ -1,0 +1,137 @@
+import React, { useState } from 'react';
+import { Header } from './components/Header/Header';
+import { Hero } from './components/Hero/Hero';
+import { Greeting } from './components/Greeting/Greeting';
+import { Features } from './components/Features/Features';
+import { CertifiedTeam } from './components/CertifiedTeam/CertifiedTeam';
+import { TeamSection } from './components/Team/TeamSection';
+import { ProductsSection } from './components/Products/ProductsSection';
+import { PartnershipSection } from './components/Partnership/PartnershipSection';
+import { CompaniesSection } from './components/Companies/CompaniesSection';
+import { CurriculumSection } from './components/Curriculum/CurriculumSection';
+import { Platforms } from './components/Platforms/Platforms';
+import { CommunitySection } from './components/Communities/CommunitySection';
+import { YouTubeSubscribe } from './components/YouTube/YouTubeSubscribe';
+import { TrustSection } from './components/Trust/TrustSection';
+import { FAQSection } from './components/FAQ/FAQSection';
+import { Footer } from './components/Footer/Footer';
+import { AuthProvider } from './contexts/AuthContext';
+import { AuthModal } from './components/Auth/AuthModal';
+import { WelcomePopup } from './components/WelcomePopup/WelcomePopup';
+
+// Page imports
+import { BlogPage } from './pages/Blog/BlogPage';
+import { CoursesPage } from './pages/Courses/CoursesPage';
+import { ProductsPage } from './pages/Products/ProductsPage';
+import { CommunityPage } from './pages/Community/CommunityPage';
+import { SuccessStoriesPage } from './pages/SuccessStories/SuccessStoriesPage';
+import { ContactPage } from './pages/Contact/ContactPage';
+import { CertificationsPage } from './pages/Certifications/CertificationsPage';
+import { LearningPathPage } from './pages/LearningPath/LearningPathPage';
+import { CertificationSupportPage } from './pages/CertificationSupport/CertificationSupportPage';
+import { ExpertSessionsPage } from './pages/ExpertSessions/ExpertSessionsPage';
+import { HandsOnProjectsPage } from './pages/HandsOnProjects/HandsOnProjectsPage';
+import { CheckoutPage } from './pages/Checkout/CheckoutPage';
+
+type PageType = 'home' | 'blog' | 'success-stories' | 'courses' | 'certifications' | 
+                'contact' | 'products' | 'community' | 'learning-path' | 
+                'certification-support' | 'expert-sessions' | 'hands-on-projects' | 'checkout';
+
+function App() {
+  const [currentPage, setCurrentPage] = useState<PageType>('home');
+  const [showAuthModal, setShowAuthModal] = useState(false);
+  const [authView, setAuthView] = useState<'login' | 'signup'>('login');
+  const [showWelcomePopup, setShowWelcomePopup] = useState(true);
+
+  const handleAuthClick = (view: 'login' | 'signup') => {
+    setAuthView(view);
+    setShowAuthModal(true);
+    setShowWelcomePopup(false);
+  };
+
+  const handleNavigate = (page: PageType) => {
+    setCurrentPage(page);
+    window.scrollTo(0, 0);
+  };
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return (
+          <>
+            <Hero />
+            <Greeting />
+            <Features onNavigate={handleNavigate} />
+            <CertifiedTeam />
+            <TeamSection />
+            <ProductsSection />
+            <PartnershipSection />
+            <CompaniesSection />
+            <CurriculumSection />
+            <Platforms />
+            <CommunitySection />
+            <YouTubeSubscribe />
+            <TrustSection />
+            <FAQSection />
+          </>
+        );
+      case 'blog':
+        return <BlogPage />;
+      case 'courses':
+        return <CoursesPage onCertificationsClick={() => handleNavigate('certifications')} />;
+      case 'products':
+        return <ProductsPage />;
+      case 'community':
+        return <CommunityPage />;
+      case 'success-stories':
+        return <SuccessStoriesPage />;
+      case 'contact':
+        return <ContactPage />;
+      case 'certifications':
+        return <CertificationsPage onNavigate={handleNavigate} />;
+      case 'learning-path':
+        return <LearningPathPage />;
+      case 'certification-support':
+        return <CertificationSupportPage />;
+      case 'expert-sessions':
+        return <ExpertSessionsPage />;
+      case 'hands-on-projects':
+        return <HandsOnProjectsPage />;
+      case 'checkout':
+        return <CheckoutPage />;
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <AuthProvider>
+      <div className="min-h-screen bg-[#040d21]">
+        <Header 
+          onAuthClick={handleAuthClick}
+          onNavigate={handleNavigate}
+        />
+        
+        <main>
+          {renderPage()}
+        </main>
+        
+        <Footer />
+
+        <AuthModal 
+          isOpen={showAuthModal}
+          onClose={() => setShowAuthModal(false)}
+          defaultView={authView}
+        />
+
+        <WelcomePopup 
+          isOpen={showWelcomePopup}
+          onClose={() => setShowWelcomePopup(false)}
+          onLogin={() => handleAuthClick('login')}
+        />
+      </div>
+    </AuthProvider>
+  );
+}
+
+export default App;
