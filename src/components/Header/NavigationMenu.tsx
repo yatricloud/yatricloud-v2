@@ -4,14 +4,18 @@ import { NavSection } from './navigationData';
 import { DropdownMenu } from './DropdownMenu';
 import { WhyDropdown } from './WhyDropdown';
 import { ProductsDropdown } from './ProductsDropdown';
+import { AuthButtons } from '../Auth/AuthButtons';
+import { useAuth } from '../../contexts/AuthContext';
 
 interface NavigationMenuProps {
   items: NavSection[];
   onNavigate: (page: string) => void;
+  onAuthClick: (view: 'login' | 'signup') => void;
 }
 
-export function NavigationMenu({ items, onNavigate }: NavigationMenuProps) {
+export function NavigationMenu({ items, onNavigate, onAuthClick }: NavigationMenuProps) {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const { user } = useAuth();
 
   const handleNavClick = (href: string, section: NavSection) => {
     const page = href.replace('/', '') || 'home';
@@ -66,6 +70,15 @@ export function NavigationMenu({ items, onNavigate }: NavigationMenuProps) {
           )}
         </div>
       ))}
+
+      {!user && (
+        <div className="ml-8">
+          <AuthButtons
+            onSignIn={() => onAuthClick('login')}
+            onSignUp={() => onAuthClick('signup')}
+          />
+        </div>
+      )}
     </nav>
   );
 }

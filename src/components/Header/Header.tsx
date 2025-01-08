@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavigationMenu } from './NavigationMenu';
 import { navigationItems } from './navigationData';
 import { useAuth } from '../../contexts/AuthContext';
 import { ProfileMenu } from './ProfileMenu';
 import { Logo } from '../common/Logo';
+import { Menu } from 'lucide-react';
+import { MobileMenu } from './MobileMenu';
 
 interface HeaderProps {
   onAuthClick: (view: 'login' | 'signup') => void;
@@ -12,10 +14,14 @@ interface HeaderProps {
 
 export function Header({ onAuthClick, onNavigate }: HeaderProps) {
   const { user } = useAuth();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full bg-[rgba(22,27,34,0.8)] backdrop-blur-md z-50 border-b border-[#30363d]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 w-full z-50">
+      {/* Background with blur and gradient */}
+      <div className="absolute inset-0 bg-[#161b22]/80 backdrop-blur-md border-b border-[#30363d]" />
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <button 
             onClick={() => onNavigate('home')}
@@ -24,34 +30,35 @@ export function Header({ onAuthClick, onNavigate }: HeaderProps) {
             <Logo />
           </button>
 
-          <div className="flex-1 flex justify-center">
-            <NavigationMenu items={navigationItems} onNavigate={onNavigate} />
+          <div className="hidden lg:flex flex-1 justify-center">
+            <NavigationMenu 
+              items={navigationItems} 
+              onNavigate={onNavigate}
+              onAuthClick={onAuthClick}
+            />
           </div>
 
-          <div>
-            {user ? (
-              <ProfileMenu />
-            ) : (
-              <div className="flex items-center space-x-4">
-                <button
-                  onClick={() => onAuthClick('login')}
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  Sign in
-                </button>
-                <button
-                  onClick={() => onAuthClick('signup')}
-                  className="bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 
-                    text-white px-4 py-1.5 rounded-md transition-all duration-200 
-                    hover:shadow-lg hover:shadow-sky-500/20 hover:scale-[1.02]"
-                >
-                  Sign up
-                </button>
-              </div>
-            )}
+          <div className="flex items-center space-x-4">
+            {user && <ProfileMenu />}
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(true)}
+              className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        onNavigate={onNavigate}
+        onAuthClick={onAuthClick}
+      />
     </header>
   );
 }
