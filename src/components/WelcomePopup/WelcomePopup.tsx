@@ -51,7 +51,7 @@ export function WelcomePopup({ isOpen, onClose, onLogin }: WelcomePopupProps) {
                 <span>Special Offer</span>
               </div>
               <h2 className="text-3xl font-bold text-white mb-4 text-glow">
-                Unlock Premium Benefits
+                Unlock Free Benefits
               </h2>
               <p className="text-lg text-gray-300">
                 Join our community to access exclusive resources

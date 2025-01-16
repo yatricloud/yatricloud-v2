@@ -3,7 +3,7 @@ import { Shield, Users, Award } from 'lucide-react';
 
 export function TrustSection() {
   const stats = [
-    { icon: Users, value: '10,000+', label: 'Active Students' },
+    { icon: Users, value: '5000+', label: 'Active Students' },
     { icon: Award, value: '500+', label: 'Certifications Achieved' },
     { icon: Shield, value: '95%', label: 'Success Rate' }
   ];

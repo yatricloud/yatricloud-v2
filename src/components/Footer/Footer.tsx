@@ -4,7 +4,11 @@ import { SocialLinks } from './SocialLinks';
 import { FooterLinks } from './FooterLinks';
 import { Newsletter } from './Newsletter';
 
-export function Footer() {
+interface FooterProps {
+  onNavigate: (page: string) => void;
+}
+
+export function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="relative bg-[#040d21] pt-24 pb-12 overflow-hidden">
       {/* Background effects */}
@@ -36,36 +40,36 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="/about"
+                <button
+                  onClick={() => onNavigate('courses')}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  About Us
-                </a>
+                  Courses
+                </button>
               </li>
               <li>
-                <a
-                  href="/why"
+                <button
+                  onClick={() => onNavigate('products')}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Why Choose Us
-                </a>
+                  Products
+                </button>
               </li>
               <li>
-                <a
-                  href="/blog"
+                <button
+                  onClick={() => onNavigate('blog')}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Blog
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <button
+                  onClick={() => onNavigate('contact')}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -74,6 +78,17 @@ export function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold text-white mb-4">Community</h3>
             <ul className="space-y-3">
+
+            <li>
+                <a
+                  href="https://www.youtube.com/@yatricloud?sub_confirmation=1&sub_confirmation=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  YouTube Channel
+                </a>
+              </li>
               <li>
                 <a
                   href="https://whatsapp.com/channel/0029VakdAHIFHWq60yHA1Q0s"
@@ -94,16 +109,7 @@ export function Footer() {
                   Telegram Group
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://discord.gg/yatricloud"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Discord Server
-                </a>
-              </li>
+              
             </ul>
           </div>
 

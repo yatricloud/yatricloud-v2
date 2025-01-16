@@ -59,7 +59,7 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-              <button
+              {/* <button
                 className="w-full sm:w-auto bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 hover:to-sky-600 
                 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 
                 hover:scale-[1.02] flex items-center justify-center"
@@ -72,7 +72,7 @@ export function Hero() {
                 text-white transition-all duration-200 hover:bg-sky-500/10"
               >
                 Learn More
-              </button>
+              </button> */}
             </div>
           </div>
 

@@ -32,10 +32,13 @@ import { CertificationSupportPage } from './pages/CertificationSupport/Certifica
 import { ExpertSessionsPage } from './pages/ExpertSessions/ExpertSessionsPage';
 import { HandsOnProjectsPage } from './pages/HandsOnProjects/HandsOnProjectsPage';
 import { CheckoutPage } from './pages/Checkout/CheckoutPage';
+import { PrivacyPolicy } from './pages/Privacy/PrivacyPolicy';
+import { TermsOfService } from './pages/Terms/TermsOfService';
 
 type PageType = 'home' | 'blog' | 'success-stories' | 'courses' | 'certifications' | 
                 'contact' | 'products' | 'community' | 'learning-path' | 
-                'certification-support' | 'expert-sessions' | 'hands-on-projects' | 'checkout';
+                'certification-support' | 'expert-sessions' | 'hands-on-projects' | 
+                'checkout' | 'privacy' | 'terms';
 
 function App() {
   const [currentPage, setCurrentPage] = useState<PageType>('home');
@@ -61,16 +64,17 @@ function App() {
           <>
             <Hero />
             <Greeting />
+            {/* <CompaniesSection /> */}
             <Features onNavigate={handleNavigate} />
+            <YouTubeSubscribe />
             <CertifiedTeam />
             <TeamSection />
             <ProductsSection />
             <PartnershipSection />
-            <CompaniesSection />
+            <CommunitySection />
+ 
             <CurriculumSection />
             <Platforms />
-            <CommunitySection />
-            <YouTubeSubscribe />
             <TrustSection />
             <FAQSection />
           </>
@@ -99,6 +103,10 @@ function App() {
         return <HandsOnProjectsPage />;
       case 'checkout':
         return <CheckoutPage />;
+      case 'privacy':
+        return <PrivacyPolicy />;
+      case 'terms':
+        return <TermsOfService />;
       default:
         return null;
     }
@@ -116,7 +124,7 @@ function App() {
           {renderPage()}
         </main>
         
-        <Footer />
+        <Footer onNavigate={handleNavigate} />
 
         <AuthModal 
           isOpen={showAuthModal}

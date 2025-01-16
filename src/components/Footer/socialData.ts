@@ -12,7 +12,7 @@ export const socialLinks = [
   {
     icon: Youtube,
     label: 'YouTube',
-    url: 'https://youtube.com/@yatricloud'
+    url: 'https://www.youtube.com/@yatricloud?sub_confirmation=1&sub_confirmation=1'
   },
   {
     icon: MessageSquare,

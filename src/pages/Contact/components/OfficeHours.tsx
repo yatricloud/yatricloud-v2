@@ -8,8 +8,7 @@ export function OfficeHours() {
       </h2>
       <div className="space-y-2">
         <p className="text-gray-400">Monday - Friday: 9:00 AM - 6:00 PM</p>
-        <p className="text-gray-400">Saturday: 10:00 AM - 4:00 PM</p>
-        <p className="text-gray-400">Sunday: Closed</p>
+        <p className="text-gray-400">Saturday - Sunday: 10:00 AM - 4:00 PM</p>
       </div>
     </div>
   );

@@ -83,10 +83,10 @@ export const navigationItems: NavSection[] = [
     label: 'Community',
     items: [{ label: 'Community', href: '/community' }],
   },
-  {
-    label: 'Success Stories',
-    items: [{ label: 'Success Stories', href: '/success-stories' }],
-  },
+  // {
+  //   label: 'Success Stories',
+  //   items: [{ label: 'Success Stories', href: '/success-stories' }],
+  // },
   {
     label: 'Contact',
     items: [{ label: 'Contact', href: '/contact' }],

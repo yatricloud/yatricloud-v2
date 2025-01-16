@@ -9,13 +9,13 @@ interface AuthButtonsProps {
 export function AuthButtons({ onSignIn, onSignUp }: AuthButtonsProps) {
   return (
     <div className="flex items-center space-x-4">
-      <button
+      {/* <button
         onClick={onSignIn}
         className="flex items-center text-white/70 hover:text-white transition-colors"
       >
         <LogIn className="w-4 h-4 mr-2" />
         Sign in
-      </button>
+      </button> */}
       <button
         onClick={onSignUp}
         className="flex items-center bg-gradient-to-r from-sky-400 to-sky-500 hover:from-sky-500 
@@ -23,7 +23,7 @@ export function AuthButtons({ onSignIn, onSignUp }: AuthButtonsProps) {
           hover:shadow-lg hover:shadow-sky-500/20 hover:scale-[1.02]"
       >
         <UserPlus className="w-4 h-4 mr-2" />
-        Sign up
+        Login
       </button>
     </div>
   );

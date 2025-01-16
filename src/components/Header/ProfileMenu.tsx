@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Settings, LogOut } from 'lucide-react';
+import { User, LogOut } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useProfile } from '../../hooks/useProfile';
 import { signOut } from '../../lib/auth';
@@ -36,14 +36,6 @@ export function ProfileMenu() {
             <p className="text-white font-medium">{profile?.full_name}</p>
             <p className="text-sm text-gray-400 capitalize">{profile?.type || 'User'}</p>
           </div>
-          
-          <a
-            href="/profile"
-            className="flex items-center px-4 py-2 text-gray-400 hover:text-white hover:bg-white/5"
-          >
-            <Settings className="w-4 h-4 mr-2" />
-            Settings
-          </a>
           
           <button
             onClick={handleSignOut}

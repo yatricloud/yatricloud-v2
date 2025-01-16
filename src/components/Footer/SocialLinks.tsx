@@ -7,7 +7,7 @@ interface SocialLinksProps {
 
 export function SocialLinks({ className = '' }: SocialLinksProps) {
   const socialLinks = [
-    { icon: Youtube, href: 'https://youtube.com/@yatricloud', label: 'YouTube' },
+    { icon: Youtube, href: 'https://www.youtube.com/@yatricloud?sub_confirmation=1&sub_confirmation=1', label: 'YouTube' },
     { icon: Linkedin, href: 'https://linkedin.com/company/yatricloud', label: 'LinkedIn' },
     { icon: MessageSquare, href: 'https://whatsapp.com/channel/0029VakdAHIFHWq60yHA1Q0s', label: 'WhatsApp' },
     { icon: Send, href: 'https://t.me/yatricloud', label: 'Telegram' },

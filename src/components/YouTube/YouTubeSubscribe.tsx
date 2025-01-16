@@ -41,7 +41,7 @@ export function YouTubeSubscribe() {
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
               <a
-                href="https://youtube.com/@yatricloud"
+                href="https://www.youtube.com/@yatricloud?sub_confirmation=1&sub_confirmation=1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center px-8 py-3 rounded-lg bg-gradient-to-r from-red-500 to-red-600 
@@ -77,7 +77,7 @@ export function YouTubeSubscribe() {
               group-hover:border-red-500/50 transition-all duration-300"
             >
               <img
-                src="https://media.licdn.com/dms/image/v2/D4D2DAQEvkiuSb0HcHg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1719361830884?e=1736406000&v=beta&t=jFjnG9sBluIXr83BIY71PqhoBpHkpeLnMxMHkTUX2vM"
+                src="https://i.ibb.co/QrtTq3q/yatri-cloud-yt.jpg"
                 alt="Yatri Cloud YouTube Channel"
                 className="w-full rounded-2xl transform transition-transform duration-500 group-hover:scale-105"
               />
