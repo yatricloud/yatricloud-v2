@@ -62,7 +62,7 @@ export function TelegramCard() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-lg" />
             <img
-              src="https://wallpapers.com/images/high/telegram-clouds-with-word-xh3106kz7obew1vv.webp"
+              src="https://raw.githubusercontent.com/yatricloud/yatri-images/refs/heads/main/yatricloud.com/social-media/telegram.png"
               alt="Yatri Cloud Telegram Community"
               className="w-full h-full object-cover rounded-lg"
             />

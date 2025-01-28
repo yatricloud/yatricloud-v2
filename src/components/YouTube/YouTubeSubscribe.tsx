@@ -77,7 +77,7 @@ export function YouTubeSubscribe() {
               group-hover:border-red-500/50 transition-all duration-300"
             >
               <img
-                src="https://i.ibb.co/QrtTq3q/yatri-cloud-yt.jpg"
+                src="https://raw.githubusercontent.com/yatricloud/yatri-images/refs/heads/main/yatricloud.com/social-media/youtube-banner.png"
                 alt="Yatri Cloud YouTube Channel"
                 className="w-full rounded-2xl transform transition-transform duration-500 group-hover:scale-105"
               />
