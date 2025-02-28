@@ -66,10 +66,10 @@ export const navigationItems: NavSection[] = [
   //     },
   //   ],
   // },
-  {
-    label: 'Courses',
-    items: [{ label: 'Courses', href: '/courses' }],
-  },
+  // {
+  //   label: 'Courses',
+  //   items: [{ label: 'Courses', href: '/courses' }],
+  // },
   {
     label: 'Products',
     items: [{ label: 'Products', href: '/products' }],

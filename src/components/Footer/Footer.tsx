@@ -39,14 +39,14 @@ export function Footer({ onNavigate }: FooterProps) {
               Quick Links
             </h3>
             <ul className="space-y-3">
-              <li>
+              {/* <li>
                 <button
                   onClick={() => onNavigate('courses')}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Courses
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button
                   onClick={() => onNavigate('products')}
