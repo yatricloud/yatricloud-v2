@@ -2,7 +2,6 @@ import React from 'react';
 import { Users } from 'lucide-react';
 import { WhatsAppChannel } from './WhatsAppChannel';
 import { CommunityGrid } from './CommunityGrid';
-import { TelegramCard } from './TelegramCard';
 
 export function CommunitySection() {
   return (
@@ -30,9 +29,6 @@ export function CommunitySection() {
 
           {/* WhatsApp Groups Grid */}
           <CommunityGrid />
-
-          {/* Telegram Card */}
-          <TelegramCard />
         </div>
       </div>
     </section>

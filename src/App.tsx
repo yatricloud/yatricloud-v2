@@ -12,6 +12,7 @@ import { CurriculumSection } from './components/Curriculum/CurriculumSection';
 import { Platforms } from './components/Platforms/Platforms';
 import { CommunitySection } from './components/Communities/CommunitySection';
 import { YouTubeSubscribe } from './components/YouTube/YouTubeSubscribe';
+import { LatestVideos } from './components/Videos/LatestVideos';
 import { TrustSection } from './components/Trust/TrustSection';
 import { FAQSection } from './components/FAQ/FAQSection';
 import { Footer } from './components/Footer/Footer';
@@ -35,7 +36,7 @@ import { CheckoutPage } from './pages/Checkout/CheckoutPage';
 import { PrivacyPolicy } from './pages/Privacy/PrivacyPolicy';
 import { TermsOfService } from './pages/Terms/TermsOfService';
 
-type PageType = 'home' | 'blog' | 'success-stories' | 'courses' | 'certifications' | 
+export type PageType = 'home' | 'blog' | 'success-stories' | 'courses' | 'certifications' | 
                 'contact' | 'products' | 'community' | 'learning-path' | 
                 'certification-support' | 'expert-sessions' | 'hands-on-projects' | 
                 'checkout' | 'privacy' | 'terms';
@@ -67,6 +68,7 @@ function App() {
             {/* <CompaniesSection /> */}
             <Features onNavigate={handleNavigate} />
             <YouTubeSubscribe />
+            <LatestVideos />
             <CertifiedTeam />
             <TeamSection />
             <ProductsSection />

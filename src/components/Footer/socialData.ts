@@ -19,11 +19,11 @@ export const socialLinks = [
     label: 'WhatsApp',
     url: 'https://whatsapp.com/channel/0029VakdAHIFHWq60yHA1Q0s'
   },
-  {
-    icon: Send,
-    label: 'Telegram',
-    url: 'https://t.me/yatricloud'
-  },
+  // {
+  //   icon: Send,
+  //   label: 'Telegram',
+  //   url: 'https://t.me/yatricloud'
+  // },
   {
     icon: BookOpen,
     label: 'Medium',

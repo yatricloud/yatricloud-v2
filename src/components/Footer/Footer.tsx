@@ -3,6 +3,7 @@ import { Logo } from '../common/Logo';
 import { SocialLinks } from './SocialLinks';
 import { FooterLinks } from './FooterLinks';
 import { Newsletter } from './Newsletter';
+import { PageType } from '../../App';
 
 interface FooterProps {
   onNavigate: (page: string) => void;
@@ -99,17 +100,6 @@ export function Footer({ onNavigate }: FooterProps) {
                   WhatsApp Channel
                 </a>
               </li>
-              <li>
-                <a
-                  href="https://t.me/yatricloud"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Telegram Group
-                </a>
-              </li>
-              
             </ul>
           </div>
 
@@ -125,12 +115,12 @@ export function Footer({ onNavigate }: FooterProps) {
             © {new Date().getFullYear()} Yatri Cloud. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 text-sm text-gray-400">
-            <a href="/privacy" className="hover:text-white transition-colors">
+            <button onClick={() => onNavigate('privacy')} className="hover:text-white transition-colors">
               Privacy Policy
-            </a>
-            <a href="/terms" className="hover:text-white transition-colors">
+            </button>
+            <button onClick={() => onNavigate('terms')} className="hover:text-white transition-colors">
               Terms of Service
-            </a>
+            </button>
           </div>
         </div>
       </div>

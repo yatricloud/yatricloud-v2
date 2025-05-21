@@ -18,7 +18,7 @@ export function PrivacyPolicy() {
               <span>Privacy Policy</span>
             </div>
             <h1 className="text-4xl font-bold text-white mb-4 text-glow">Privacy Policy</h1>
-            <p className="text-gray-400">Last updated: January 5, 2024</p>
+            <p className="text-gray-400">Last updated: May 21, 2025</p>
           </div>
 
           <div className="prose prose-invert max-w-none">
@@ -76,6 +76,27 @@ export function PrivacyPolicy() {
                   Email: privacy@yatricloud.com
                   <br />
                   Address: E10, Green Glen Layout, Outer Ring Road, Bellandur, Bengaluru, Karnataka India
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-white mb-4">6. Data Security</h2>
+                <p className="text-gray-400">
+                  We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-white mb-4">7. Cookies and Tracking</h2>
+                <p className="text-gray-400">
+                  We use cookies and similar tracking technologies to improve your experience on our site. You can control cookies through your browser settings.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-white mb-4">8. International Data Transfers</h2>
+                <p className="text-gray-400">
+                  Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for such transfers.
                 </p>
               </section>
             </div>

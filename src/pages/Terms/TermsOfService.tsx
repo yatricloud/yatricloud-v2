@@ -18,7 +18,7 @@ export function TermsOfService() {
               <span>Terms of Service</span>
             </div>
             <h1 className="text-4xl font-bold text-white mb-4 text-glow">Terms of Service</h1>
-            <p className="text-gray-400">Last updated: January 5, 2024</p>
+            <p className="text-gray-400">Last updated: May 21, 2025</p>
           </div>
 
           <div className="prose prose-invert max-w-none">
@@ -80,6 +80,27 @@ export function TermsOfService() {
                   Email: legal@yatricloud.com
                   <br />
                   Address: E10, Green Glen Layout, Outer Ring Road, Bellandur, Bengaluru, Karnataka India
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-white mb-4">8. User Conduct</h2>
+                <p className="text-gray-400">
+                  Users must not engage in any activity that disrupts or interferes with the services, including unauthorized access, data mining, or any form of automated data collection.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-white mb-4">9. Termination</h2>
+                <p className="text-gray-400">
+                  We reserve the right to terminate or suspend your access to our services at any time, without notice, for any reason, including violation of these terms.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold text-white mb-4">10. Dispute Resolution</h2>
+                <p className="text-gray-400">
+                  Any disputes arising from these terms shall be resolved through arbitration in accordance with the laws of India.
                 </p>
               </section>
             </div>

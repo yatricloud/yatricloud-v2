@@ -30,6 +30,16 @@ export function LatestVideos() {
         )}
 
         {isLoading ? <VideoSkeleton /> : <VideoGrid videos={videos} />}
+        <div className="text-center mt-8">
+          <a
+            href="https://www.youtube.com/@yatricloud?sub_confirmation=1&sub_confirmation=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-medium transition-all duration-200 hover:scale-[1.02] hover:shadow-lg hover:shadow-red-500/25"
+          >
+            Show More
+          </a>
+        </div>
       </div>
     </section>
   );
