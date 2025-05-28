@@ -5,7 +5,7 @@ export const whatsappGroups = [
   {
     name: 'Azure Yatri',
     description: 'Microsoft Azure certification and learning community',
-    link: 'https://chat.whatsapp.com/CzcpDRiV2vR87vGwY7dPAp',
+    link: 'https://chat.whatsapp.com/EYym9BdXB6b8DXKmmzVvey',
     icon: <Cloud className="w-5 h-5 text-white" />,
     image: 'https://raw.githubusercontent.com/yatricloud/yatri-images/refs/heads/main/yatricloud.com/whatsapp-groups/AWS%20YATRI%20-%20Whatsapp%20Group.png',
     gradient: 'from-blue-500/20 to-cyan-500/20',
