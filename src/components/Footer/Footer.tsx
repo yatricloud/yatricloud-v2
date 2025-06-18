@@ -3,10 +3,10 @@ import { Logo } from '../common/Logo';
 import { SocialLinks } from './SocialLinks';
 import { FooterLinks } from './FooterLinks';
 import { Newsletter } from './Newsletter';
-import { PageType } from '../../App';
+import type { PageType } from '../../App';
 
 interface FooterProps {
-  onNavigate: (page: string) => void;
+  onNavigate: (page: PageType) => void;
 }
 
 export function Footer({ onNavigate }: FooterProps) {

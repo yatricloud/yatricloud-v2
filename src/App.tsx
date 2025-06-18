@@ -19,6 +19,7 @@ import { Footer } from './components/Footer/Footer';
 import { AuthProvider } from './contexts/AuthContext';
 import { AuthModal } from './components/Auth/AuthModal';
 import { WelcomePopup } from './components/WelcomePopup/WelcomePopup';
+import { ConsentBanner } from './components/common/ConsentBanner';
 
 // Page imports
 import { BlogPage } from './pages/Blog/BlogPage';
@@ -127,6 +128,8 @@ function App() {
         </main>
         
         <Footer onNavigate={handleNavigate} />
+
+        <ConsentBanner />
 
         <AuthModal 
           isOpen={showAuthModal}
